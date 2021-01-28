@@ -5,6 +5,7 @@ import java.util.List;
 
 public class _54_螺旋矩阵 {
     public List<Integer> spiralOrder(int[][] matrix) {
+        int count = matrix.length * matrix[0].length;
         int top = 0;
         int right = matrix[0].length - 1;
         int under = matrix.length - 1;
@@ -19,6 +20,7 @@ public class _54_螺旋矩阵 {
                 result.add(matrix[i][right]);
             }
             right--;
+            if (result.size() == count) break;
             for (int i = right; i >= left; i--) {
                 result.add(matrix[under][i]);
             }

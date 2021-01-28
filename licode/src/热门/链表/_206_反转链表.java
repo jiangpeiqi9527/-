@@ -8,8 +8,8 @@ public class _206_反转链表 {
         }
         ListNode temp = reverseList1(head.next);
         head.next.next = head;
-        temp.next = head;
-        return head;
+        head.next = null;
+        return temp;
     }
 
     // 迭代

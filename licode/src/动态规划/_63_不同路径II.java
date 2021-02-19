@@ -1,10 +1,14 @@
 package 动态规划;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class _63_不同路径II {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        if (obstacleGrid.length == 1 && obstacleGrid[0].length == 1) return (obstacleGrid[0][0] + 1) >> 1;
-        if (obstacleGrid[0][0] == 1) return 0;
+        if (obstacleGrid.length == 1 && obstacleGrid[0].length == 1) return (obstacleGrid[0][0] + 1) & 1;
         int[][] dp = new int[obstacleGrid.length][obstacleGrid[0].length];
+        List<Integer> list = new ArrayList<>();
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[0].length; j++) {
                 if (obstacleGrid[i][j] == 1) dp[i][j] = -1;

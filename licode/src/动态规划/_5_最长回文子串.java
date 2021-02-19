@@ -31,8 +31,39 @@ public class _5_最长回文子串 {
                 }
             }
         }
-        return s.substring(begin,end + 1);
+        return s.substring(begin, end + 1);
     }
 
+    public String longestPalindrome2(String s) {
+        if (s == null) return null;
+        char[] chars = s.toCharArray();
+        if (chars.length < 2) return s;
+        int maxLen = 1;
+        int begin = 0;
+        int end = 0;
+        boolean[][] dp = new boolean[chars.length][chars.length];
+        for (int i = chars.length - 1; i >= 0; i--) {
+            for (int j = i; j < chars.length; j++) {
+                if ((j - i + 1) < 3) {
+                    dp[i][j] = chars[i] == chars[j] ? true : false;
+                    if (dp[i][j] && (j - i + 1) > maxLen) {
+                        maxLen = j - i + 1;
+                        begin = i;
+                        end = j;
+                    }
+                } else {
+                    if (dp[i + 1][j - 1]) {
+                        dp[i][j] = chars[i] == chars[j] ? true : false;
+                        if (dp[i][j] && (j - i + 1) > maxLen) {
+                            maxLen = j - i + 1;
+                            begin = i;
+                            end = j;
+                        }
+                    }
+                }
+            }
+        }
+        return s.substring(begin, end + 1);
 
+    }
 }

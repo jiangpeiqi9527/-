@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/Day04/Day04.iml" filepath="$PROJECT_DIR$/Day04/Day04.iml" />
       <module fileurl="file://$PROJECT_DIR$/licode/licode.iml" filepath="$PROJECT_DIR$/licode/licode.iml" />
       <module fileurl="file://$PROJECT_DIR$/排序算法/排序算法.iml" filepath="$PROJECT_DIR$/排序算法/排序算法.iml" />
+      <module fileurl="file://$PROJECT_DIR$/毕业季/毕业季.iml" filepath="$PROJECT_DIR$/毕业季/毕业季.iml" />
       <module fileurl="file://$PROJECT_DIR$/算法的评估/算法的评估.iml" filepath="$PROJECT_DIR$/算法的评估/算法的评估.iml" />
     </modules>
   </component>
